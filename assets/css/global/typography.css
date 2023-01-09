@@ -1,0 +1,90 @@
+h1 {
+  @apply font-extrabold md:text-4xl pb-4 text-black;
+  font-family: "Tiempos Headline Medium", "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+  ;
+}
+
+h2 {
+    @apply font-bold text-xl md:text-2xl pb-2 text-black;
+}
+
+p {
+  line-height: 1.4;
+}
+
+.h1-sans-serif {
+  @apply font-body;
+  letter-spacing: -0.6px;
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+@media (min-width: 1024px) {
+  .h1-sans-serif {
+    font-size: 42px;
+  }
+}
+
+.p-small {
+  @apply text-xs md:text-sm text-black;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.gradient-text {
+  animation: gradient-text-motion 30s linear infinite;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 255, 1) 0%,
+    rgba(0, 0, 255, 1) 33%,
+    rgba(255, 0, 255, 1) 66%,
+    rgba(0, 0, 255, 1) 100%
+  );
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.gradient-text-alt {
+    animation: gradient-text-motion 30s linear infinite;
+    background: linear-gradient(
+      45deg,
+      rgba(255, 0, 255, 1) 0%,
+      rgba(255, 213, 0, 1) 33%,
+      rgba(255, 0, 255, 1) 66%,
+      rgba(255, 213, 0, 1) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+@keyframes gradient-text-motion {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient-text-alt-motion {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.text-link {
+  @apply text-defaultBlue hover:text-defaultPink font-medium;
+  transition: all 0.2s ease-out;
+}
